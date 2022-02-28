@@ -1,5 +1,4 @@
 package com.blz.linkedlist;
-
 public class LinkedList {
 	Node head;
 
@@ -20,6 +19,23 @@ public class LinkedList {
 		else {
 			newNode.ref = head;
 			head = newNode;
+		}
+	}
+
+	public void addLast(Object data) {
+		Node newNode = new Node(data);
+
+		if (head == null)
+			head = newNode;
+		else if (head.ref == null)
+			head.ref = newNode;
+		else {
+			Node temp = head;
+
+			while (temp.ref != null) {
+				temp = temp.ref;
+			}
+			temp.ref = newNode;
 		}
 	}
 
