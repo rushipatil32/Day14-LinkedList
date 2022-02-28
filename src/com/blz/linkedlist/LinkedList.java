@@ -1,7 +1,14 @@
 package com.blz.linkedlist;
 
 public class LinkedList {
-	 public static void main(String[] args) {
-		System.out.println("Welcome to linkedlist");
+	Node head;
+
+	public class Node {
+		Object data;
+		Node ref;
+
+		public Node(Object data) {
+			this.data = data;
+		}
 	}
 }
